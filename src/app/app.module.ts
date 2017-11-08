@@ -3,26 +3,26 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { UsersResolver } from './services/users.service';
+import { TodoService } from './services/todo.service';
 import { HomeComponent } from './home/home.component';
+import { ViewTodosComponent } from './viewtodos/viewtodos.component';
 
-
-const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent, resolve: {users: UsersResolver} },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' },
-]
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent
+    AppComponent, HomeComponent, ViewTodosComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
     RouterModule.forRoot(
-      appRoutes
+      [
+        { path: 'home', component: HomeComponent},
+        { path: 'viewtodos/:id', component: ViewTodosComponent},
+        { path: '',   redirectTo: '/home', pathMatch: 'full' },
+      ]
     )
   ],
-  providers: [UsersResolver],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

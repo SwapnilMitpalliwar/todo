@@ -7,12 +7,12 @@
       <th>Website</th>
       <th></th>
     </tr>
-    <tr *ngFor="let user of $users">
+    <tr *ngFor="let user of userList">
       <td>{{user.name}}</td>
       <td>{{user.username}}</td>
       <td>{{user.email}}</td>
       <td>{{user.phone}}</td>
       <td>{{user.website}}</td>
-      <td><button class="btn-success">View Todos</button></td>
+      <td><button class="btn-success" [routerLink]="['/viewtodos', user.id]" >View Todos</button></td>
     </tr>
   </table>
