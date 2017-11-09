@@ -5,7 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'viewtodos',
-  templateUrl: './viewtodos.component.html'
+  templateUrl: './viewtodos.component.html',
+  styleUrls:['viewtodos.style.css']
 })
 export class ViewTodosComponent implements OnInit{
   todoList:any;

@@ -1,0 +1,11 @@
+.viewtodocenter {
+    width:400px;
+    height:600px;
+    margin: auto;
+} 
+
+table{
+    overflow-y:scroll;
+    height:500px;
+    display:block;
+ }
