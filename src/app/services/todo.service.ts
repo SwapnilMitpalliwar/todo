@@ -11,4 +11,13 @@ export class TodoService {
   public getTodos(id){
     return this.http.get('https://jsonplaceholder.typicode.com/todos',{params: {userId:id}});
   }
+  public updateTodo(list){
+    return this.http.get('https://jsonplaceholder.typicode.com/todos');
+  }
+  public deleteTodo(id){
+    return this.http.get('https://jsonplaceholder.typicode.com/todos');
+  }
+  public addTodo(todo){
+    return this.http.get('https://jsonplaceholder.typicode.com/todos');
+  }
 }

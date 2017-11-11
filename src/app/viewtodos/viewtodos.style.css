@@ -9,3 +9,8 @@ table{
     height:500px;
     display:block;
  }
+
+ .todo-line-through{
+    text-decoration: line-through;
+ }
+ 

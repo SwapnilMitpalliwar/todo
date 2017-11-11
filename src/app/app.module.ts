@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TodoService } from './services/todo.service';
 import { HomeComponent } from './home/home.component';
 import { ViewTodosComponent } from './viewtodos/viewtodos.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { ViewTodosComponent } from './viewtodos/viewtodos.component';
     AppComponent, HomeComponent, ViewTodosComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule,
+    BrowserModule, HttpClientModule, FormsModule,
     RouterModule.forRoot(
       [
         { path: 'home', component: HomeComponent},

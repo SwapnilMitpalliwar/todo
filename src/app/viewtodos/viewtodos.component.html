@@ -1,13 +1,17 @@
 <div class="viewtodocenter">
     <table class="table table-striped">
-        <tr *ngFor="let todo of todoList">
-          <td>
-            <div>
-              <label><input type="checkbox" value="{{todo.id}}" name="todo" [checked]="todo.completed"/></label>
-            </div>
-          </td>
-          <td>{{todo.title}}</td>
-          <td><button class="btn-success">Delete</button></td>
-        </tr>
-      </table>
+      <tr *ngFor="let todo of todoList">
+        <td>
+          <div>
+            <label><input type="checkbox" value="{{todo.completed}}" (change)="updateTodo()" name="todo" [(ngModel)]="todo.completed" [checked]="todo.completed"/></label>
+          </div>
+        </td>
+        <td [ngClass]="{'todo-line-through': todo.completed}">{{todo.title}}</td>
+        <td><button class="btn-success" (click)="deleteTodo(todo.id)">Delete</button></td>
+      </tr>
+    </table>
+    <form>
+      <input type="text" [(ngModel)]="newtodotitle" name="newtodotitle">
+      <button type="button" (click)="addTodo()">Add To Do</button>
+    </form>
 </div>
