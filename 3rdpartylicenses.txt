@@ -70,11 +70,3 @@ THE SOFTWARE.
 @angular/core@5.0.0
 MIT
 MIT
-
-clarity-icons@0.10.13
-MIT
-MIT
-
-clarity-ui@0.10.13
-MIT
-MIT
