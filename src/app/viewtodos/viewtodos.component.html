@@ -10,7 +10,7 @@
             </div>
         </td>
         <td [ngClass]="{'todo-line-through': todo.completed}">{{todo.title}}</td>
-        <td><img src="../../assets/close.png" class="closebutton" (click)="deleteTodo(todo.id)"/></td>
+        <td><img src="./assets/close.png" class="closebutton" (click)="deleteTodo(todo.id)"/></td>
       </tr>
     </table>
     <form>
