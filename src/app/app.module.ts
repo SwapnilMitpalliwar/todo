@@ -7,6 +7,7 @@ import { TodoService } from './services/todo.service';
 import { HomeComponent } from './home/home.component';
 import { ViewTodosComponent } from './viewtodos/viewtodos.component';
 import { FormsModule } from '@angular/forms';
+import { ClarityModule } from "clarity-angular";
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent, HomeComponent, ViewTodosComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, FormsModule,
+    BrowserModule, HttpClientModule, FormsModule, ClarityModule.forRoot(),
     RouterModule.forRoot(
       [
         { path: 'home', component: HomeComponent},
